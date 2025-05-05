@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <Image
-            className="bg-white p-2 absolute top-0 left-20"
+            className="bg-white p-2 absolute size-18 sm:size-24 top-0 sm:left-10 md:left-20 clip-polygon"
             src="/images/logo.svg"
             alt="Swarnim Logo"
             width={120}
@@ -79,7 +79,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="xl:hidden pt-10 bg-white text-black border-t shadow-sm px-4 pb-4">
+        <div className="xl:hidden pt-10 h-screen bg-black text-white border-t shadow-sm px-4 pb-4">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -92,7 +92,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="block mt-3 bg-yellow-500 text-white text-sm px-4 py-2 rounded-full text-center hover:bg-yellow-600 transition"
+            className="block mt-3 w-fit bg-yellow-500 text-white text-sm px-4 py-2 rounded-full text-center hover:bg-yellow-600 transition"
             onClick={() => setMenuOpen(false)}
           >
             Enquire Now
